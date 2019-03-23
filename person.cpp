@@ -1,3 +1,7 @@
+//Sahil Sheth
+//CPSC 301-01
+
+
 #pragma once
 #include <string>
 #include "person.h"
@@ -5,12 +9,13 @@
 using namespace std;
 
 //Constructor
-Person::Person()
+Person::Person(string fName, string lName, float  rate, float
+       hours)
 {
-  firstName = " ";
-  payRate = 0.0;
-  lastName = " ";
-  hoursWorked = 0.0;
+  firstName = fName;
+  payRate = rate;
+  lastName = lName;
+  hoursWorked = hours;
 }
 
 
@@ -63,14 +68,12 @@ float Person::getHoursWorked()
 
 float Person::totalPay()
 {
-  //float totalBalance;
-  //totalBalance = payRate * hoursWorked;
-  //return totalBalance;
+
   return getPayRate() * getHoursWorked();
 }
 
 string Person::fullName()
 {
   return firstName + " " + lastName;
-  //return getFirstName() + " " + getLastName();
+
 }
